@@ -1,7 +1,14 @@
+import Image from 'next/image';
+
 const Character = ({ character }) => {
   return (
     <div>
-      <img src={character.photoUrl} alt={character.name} />
+      <Image
+        src={character.photoUrl}
+        alt={character.name}
+        width={333}
+        height={250}
+      />
       <h1>{character.name}</h1>
       <p>Affiliation: {character.affiliation}</p>
     </div>
